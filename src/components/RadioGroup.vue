@@ -36,10 +36,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .radio-group {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-	margin-bottom: 40px;
-  }
+	.radio-group {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-bottom: 40px;
+	}
 </style>

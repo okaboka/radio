@@ -5,7 +5,13 @@
 		<RadioItem value="3">Значение 3</RadioItem>
 	</RadioGroup>
 
-	<RadioItem :disabled="disabled" value="4" v-model="secondSelectedValue">Значение 4</RadioItem>
+	<RadioGroup :disabled="disabled" v-model="secondSelectedValue">
+		<RadioItem value="4">Значение 4</RadioItem>
+		<RadioItem value="5">Значение 5</RadioItem>
+		<RadioItem value="6">Значение 6</RadioItem>
+	</RadioGroup>
+
+	<RadioItem :disabled="disabled" value="7" v-model="thirdSelectedValue">Значение 7</RadioItem>
 
 	<CustomButton @click='this.disabled = !this.disabled;'>
 		Switch disable
@@ -29,7 +35,8 @@ export default {
 	data() {
 		return {
 			firstSelectedValue: 3,
-			secondSelectedValue: 4,
+			secondSelectedValue: 5,
+			thirdSelectedValue: 1,
 			disabled: false,
 		}
 	}, 
@@ -39,7 +46,10 @@ export default {
 			console.log(`Текущее значение firstSelectedValue (из radioGroup): ${this.firstSelectedValue}`);
 		},
 		secondSelectedValue() {
-			console.log(`Текущее значение secondSelectedValue (из radioItem): ${this.secondSelectedValue}`);
+			console.log(`Текущее значение secondSelectedValue (из radioGroup): ${this.secondSelectedValue}`);
+		},
+		thirdSelectedValue() {
+			console.log(`Текущее значение thirdSelectedValue (из RadioItem): ${this.thirdSelectedValue}`);
 		},
 		disabled() {
 			console.log(`Текущее значение disabled: ${this.disabled}`);
